@@ -1,6 +1,10 @@
 # Adding .DS_Store
 .DS_Store
 
+# Adding practice files
+1-Recommended/
+SQL-Recommended.zip
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
