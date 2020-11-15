@@ -16,11 +16,11 @@ In order to find answers to these questions, I have used PostgreSQL to analyze t
 
 ### Number of Employees nearing retirement age
 
-![Retiring Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/retiring_titles.png "retiring_titles.png")
+![Retiring Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/retiring_titles1.png "retiring_titles1.png")
 
 ### Number of Employees eligible for the mentorship program
 
-![Mentorship Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/mentorship_titles.png "mentorship_titles.png")
+![Mentorship Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/mentorship_titles1.png "mentorship_titles1.png")
 
 ## Summary
 ### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
