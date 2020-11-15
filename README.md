@@ -5,9 +5,8 @@ My client, a large company in the tech industry, is looking towards the future a
 2. Which positions will be coming available?
 
 In order to find answers to these questions, I have used PostgreSQL to analyze the tabular data from the company and create new tables/queries that answer their questions. Using the raw data from six original csv files (seen in the schema below), I have created an additional 11 tables that show how many roles will be impacted by the upcoming retirements.
-<p align="center">
+
 ![Schema](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/QuickDBD-export.png "schema.png")
-</p>
 
 ## Results
 
