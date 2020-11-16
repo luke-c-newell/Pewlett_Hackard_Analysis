@@ -18,10 +18,66 @@ In order to find answers to these questions, I have used PostgreSQL to analyze t
 
 ![Retiring Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/retiring_titles1.png "retiring_titles1.png")
 
-### Number of Employees eligible for the mentorship program
+## Summary
+### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+
+
+### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
+#### Number of employees per title eligible for the mentorship program
+This table shows the number of employees who are eligible for the mentorship program for each job title.
 
 ![Mentorship Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/mentorship_titles1.png "mentorship_titles1.png")
 
-## Summary
-### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+#### Number of employees per department eligible for the mentorship program
+
+![Mentorship Dept Names](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/mentorship_dept_names.png "mentorship_dept_names.png")
+
+### Code Sample
+
+```
+-- Create table for the number of employees eligible for the mentorship program
+SELECT COUNT (title), title
+INTO mentorship_titles
+FROM mentorship_eligibility
+GROUP BY title
+ORDER BY count DESC;
+
+-- Create table to show the departments for employees eligible for the mentorship program
+SELECT DISTINCT ON (emp_no)
+    e.emp_no,
+    e.first_name,
+    e.last_name,
+    e.birth_date,
+    de.from_date,
+    de.to_date,
+    de.dept_no,
+    ti.title
+INTO mentorship_eligibility_departments
+FROM employees AS e
+INNER JOIN dept_emp AS de
+ON (e.emp_no = de.emp_no)
+INNER JOIN titles AS ti
+ON (e.emp_no = ti.emp_no)
+WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+    AND (de.to_date = '9999-01-01')
+    AND (ti.to_date = '9999-01-01')
+ORDER BY emp_no, to_date DESC;
+
+SELECT COUNT (dept_no), dept_no
+INTO mentorship_dept_no
+FROM mentorship_eligibility_departments
+GROUP BY dept_no
+ORDER BY count DESC;
+
+SELECT *
+FROM mentorship_dept_no;
+
+SELECT  men.count,
+        men.dept_no,
+        dep.dept_name
+FROM mentorship_dept_no AS men
+INTO mentorship_dept_names
+INNER JOIN departments AS dep
+ON men.dept_no = dep.dept_no;
+```
