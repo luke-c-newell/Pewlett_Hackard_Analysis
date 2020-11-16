@@ -20,12 +20,12 @@ In order to find answers to these questions, I have used PostgreSQL to analyze t
 
 ## Summary
 ### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-
+As the silver tsunami begins to make an impact, 90,398 roles will need to be filled at Pewlett Hackard. The roles that will be impacted most are Senior Engineer and Senior Staff, which together make up the majority of the retiring employees. The company will need to act fast to ensure that these roles are filled before the majority of these employees leave their positions.
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+There are enough retirement ready employees to mentor the next generation of Pewlett Hackard employees. More importantly, the number of employees eligible for the program is quite small, so the company may want to think about expanding the mentorship program to encompass a larger proportion of their younger employees. This would allow the company to take advantage of the knowledge of their senior staff while providing development opportunities for their upcoming talent. Below, you can see the number of employees per title and per department that are eligible for the mentorship program.
 
 #### Number of employees per title eligible for the mentorship program
-This table shows the number of employees who are eligible for the mentorship program for each job title.
 
 ![Mentorship Titles](https://github.com/luke-c-newell/Pewlett_Hackard_Analysis/blob/main/Images/mentorship_titles1.png "mentorship_titles1.png")
 
